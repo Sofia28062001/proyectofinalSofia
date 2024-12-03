@@ -1,0 +1,16 @@
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #71BBD9;
+    color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    height: 70px;
+}
+
+.user {
+    margin-left: 800px;
+}
