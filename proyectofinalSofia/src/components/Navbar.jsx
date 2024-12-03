@@ -6,7 +6,7 @@ function Navbar () {
   return (
     <nav className="navbar">
         <div className='user'>USUARIO</div>
-       <div><IconUser width='48px' height='30px' /></div>
+       <button><IconUser width='50px' height='40px' color='white' /></button>
     </nav>
   );
 };

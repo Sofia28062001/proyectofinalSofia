@@ -12,5 +12,14 @@
 }
 
 .user {
-    margin-left: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande';
+}
+
+.navbar button {
+margin-right: 10px;    
+cursor: pointer;
+background-color: #71BBD9;
+border: 2px solid white;
 }
