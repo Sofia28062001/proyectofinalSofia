@@ -12,11 +12,13 @@ function App ()  {
     };
 
     return (
+        <>
         <div className="container">
           <Navbar/>
             <Sidebar onMenuClick={handleMenuClick} />
             <MainContent activeSection={activeSection} />
         </div>
+        </>
     );
 };
 

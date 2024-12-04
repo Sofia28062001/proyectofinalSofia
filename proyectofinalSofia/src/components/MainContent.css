@@ -1,0 +1,77 @@
+/* MainContent.css */
+
+/* Centra el contenido de la sección */
+.activeSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    width: 100%;
+    /* Asegúrate de que ocupe el 100% del ancho */
+}
+
+/* Estilo del título */
+.activeSection h1 {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* Eliminar el max-width para que las tarjetas ocupen todo el ancho */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    /* Aseguramos que el ul ocupe el 100% del ancho */
+}
+
+/* Estilo de las tarjetas (li) */
+li {
+    background-color: #4A90E2;
+    /* Fondo azul */
+    color: #fff;
+    /* Texto blanco */
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil */
+    width: 100%;
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 250px;
+}
+
+.popup-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.popup-buttons button {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}

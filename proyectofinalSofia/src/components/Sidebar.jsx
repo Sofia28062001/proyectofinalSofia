@@ -3,9 +3,8 @@ import './Sidebar.css';
 
 function Sidebar ({ onMenuClick }) {
     return (
+        <>
         <aside className="sidebar">
-
-
             <nav className="menu">
                 <button className="menu-button" onClick={() => onMenuClick('citas')}>
                     CITAS
@@ -18,6 +17,7 @@ function Sidebar ({ onMenuClick }) {
                 </button>
             </nav>
         </aside>
+        </>
     );
 };
 
