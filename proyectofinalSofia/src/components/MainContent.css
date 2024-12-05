@@ -1,30 +1,32 @@
-/* MainContent.css */
-
 /* Centra el contenido de la sección */
 .activeSection {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    /* Cambiado para iniciar desde la parte superior */
     min-height: 100vh;
     padding: 20px;
     width: 100%;
-    /* Asegúrate de que ocupe el 100% del ancho */
 }
 
 /* Estilo del título */
 .activeSection h1 {
     color: #ffffff;
+    font-size: 2rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     margin-bottom: 20px;
+    text-align: center;
 }
 
-/* Eliminar el max-width para que las tarjetas ocupen todo el ancho */
+/* Listado de tarjetas */
 ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
     width: 100%;
-    /* Aseguramos que el ul ocupe el 100% del ancho */
+    max-width: 800px;
+    /* Limita el ancho para una mejor apariencia */
 }
 
 /* Estilo de las tarjetas (li) */
@@ -35,13 +37,46 @@ li {
     /* Texto blanco */
     padding: 20px;
     margin: 10px 0;
-    border-radius: 8px;
+    border-radius: 10px;
     /* Bordes redondeados */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    /* Sombra sutil */
-    width: 100%;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    /* Sombra elegante */
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    /* Efectos al pasar el mouse */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
+/* Efecto al pasar el mouse sobre las tarjetas */
+li:hover {
+    transform: translateY(-5px);
+    /* Pequeño desplazamiento hacia arriba */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Botón dentro de las tarjetas */
+li button {
+    align-self: flex-end;
+    /* Alinea el botón a la derecha */
+    padding: 10px 15px;
+    background-color: #ff4d4d;
+    /* Color rojo */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+li button:hover {
+    background-color: #e60000;
+    /* Rojo más oscuro */
+    transform: scale(1.05);
+}
+
+/* Estilo del pop-up */
 .popup-overlay {
     position: fixed;
     top: 0;
@@ -53,20 +88,26 @@ li {
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    animation: fadeIn 0.3s ease-in-out;
 }
 
 .popup {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
     text-align: center;
-    min-width: 250px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    /* Sombra más notoria */
+    animation: slideIn 0.3s ease-in-out;
+    min-width: 300px;
 }
 
+/* Estilo de los botones del pop-up */
 .popup-buttons {
     margin-top: 20px;
     display: flex;
     justify-content: space-around;
+    gap: 10px;
 }
 
 .popup-buttons button {
@@ -74,4 +115,51 @@ li {
     cursor: pointer;
     border: none;
     border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Botón de confirmar */
+.popup-buttons button:first-child {
+    background-color: #4A90E2;
+    /* Azul consistente */
+    color: white;
+}
+
+.popup-buttons button:first-child:hover {
+    background-color: #004d7a;
+    /* Azul más oscuro */
+}
+
+/* Botón de cancelar */
+.popup-buttons button:last-child {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+.popup-buttons button:last-child:hover {
+    background-color: #e60000;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }

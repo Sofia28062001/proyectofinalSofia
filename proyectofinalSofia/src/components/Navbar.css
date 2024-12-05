@@ -1,25 +1,57 @@
 
+/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #71BBD9;
+    background-color: #1685c5; /* Azul profesional */
     color: white;
     position: fixed;
     width: 100%;
     z-index: 1000;
     height: 70px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra moderna */
+    padding: 0 20px; /* Espaciado lateral */
 }
 
+/* Estilo del texto del usuario */
 .user {
-    margin-left: auto;
-    margin-right: auto;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande';
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande';
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 10px; /* Ajusta el margen si es necesario */
+    letter-spacing: 1px;
+    color: #f1f1f1;
 }
 
-.navbar button {
-margin-right: 10px;    
-cursor: pointer;
-background-color: #71BBD9;
-border: 2px solid white;
+/* Botón del icono */
+.navbar-button {
+    cursor: pointer;
+    background-color: #015C92;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efecto hover para el botón */
+.navbar-button:hover {
+    background-color: #71BBD9;
+    transform: scale(1.1); /* Ligero zoom */
+}
+
+/* Ajusta el tamaño del icono */
+.navbar-button svg {
+    fill: white;
+    width: 40px;
+    height: 40px;
+    transition: fill 0.3s ease;
+}
+
+/* Efecto hover para el icono */
+.navbar-button:hover svg {
+    fill: #f1f1f1; /* Cambia el color del icono en hover */
 }
